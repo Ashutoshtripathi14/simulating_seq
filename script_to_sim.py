@@ -49,7 +49,7 @@ df_prot_filtered.Length.plot(kind="kde")
 df_prot_filtered.Entry.count()
 df_prot_filtered=df_prot_filtered.sort_values(['Length'], ascending=[False])
 
-final_data=pleasework(df_prot_filtered,nu,f_nu)
+final_data=final_data_maker(df_prot_filtered,nu,f_nu)
 
 final_data.to_csv('sim_data_uniprot_seq.csv')
 final_data.to_pickle('sim_data_uniprot.pkl.gz')
