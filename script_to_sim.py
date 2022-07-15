@@ -45,8 +45,6 @@ df_prot=df_prot.sort_values('Length')
 
 q_hi  = df_prot["Length"].quantile(0.8)
 df_prot_filtered = df_prot[(df_prot["Length"] < q_hi)]
-df_prot_filtered.Length.plot(kind="kde")
-df_prot_filtered.Entry.count()
 df_prot_filtered=df_prot_filtered.sort_values(['Length'], ascending=[False])
 
 final_data=final_data_maker(df_prot_filtered,nu,f_nu)
